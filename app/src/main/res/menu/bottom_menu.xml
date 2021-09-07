@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navbar_home"
+        android:icon="@drawable/ic_svg_home"
+        android:title="Home"
+        />
+    <item
+        android:id="@+id/navbar_search"
+        android:icon="@drawable/ic_svg_search"
+        android:title="Search"
+        />
+    <item
+        android:id="@+id/navbar_inspire"
+        android:icon="@drawable/ic_svg_inspire"
+        android:title="Inspire Me"
+        />
+    <item
+        android:id="@+id/navbar_account"
+        android:icon="@drawable/ic_svg_account"
+        android:title="Account"
+        />
+
+</menu>
