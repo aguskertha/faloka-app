@@ -70,7 +70,11 @@
 
             <include layout="@layout/layout_home_hotsale" />
 
-            <include layout="@layout/layout_home_tending_outfit" />
+            <include layout="@layout/layout_home_trending_outfit" />
+
+            <include layout="@layout/layout_home_best_brand" />
+
+            <include layout="@layout/layout_home_style_inspiration" />
 
         </LinearLayout>
 

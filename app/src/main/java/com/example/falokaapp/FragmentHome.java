@@ -14,10 +14,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.falokaapp.Adapter.BestBrandAdapter;
 import com.example.falokaapp.Adapter.CategoryAdapter;
 import com.example.falokaapp.Adapter.FLashSaleProductAdapter;
 import com.example.falokaapp.Adapter.HotSaleAdapter;
 import com.example.falokaapp.Adapter.ProductAdapter;
+import com.example.falokaapp.Model.Brand;
 import com.example.falokaapp.Model.Category;
 import com.example.falokaapp.Model.Product;
 import com.example.falokaapp.Model.Promo;
@@ -56,6 +58,14 @@ public class FragmentHome extends Fragment {
     ProductAdapter productAdapter;
 //    List<Product> productsTending
 
+    RecyclerView rvBestBrand;
+    List<Brand> brands;
+    BestBrandAdapter bestBrandAdapter ;
+
+    RecyclerView rvStyleInspiration;
+    List<Product> inspirationProducts;
+    ProductAdapter inspirationProductAdapter;
+
 
     @Nullable
     @Override
@@ -71,6 +81,8 @@ public class FragmentHome extends Fragment {
         initFlashSale(view);
         initHotSale(view);
         initTrendingOutfit(view);
+        initBestBrand(view);
+        initStyleInspiration(view);
         return view;
     }
 
@@ -143,8 +155,26 @@ public class FragmentHome extends Fragment {
         });
     }
 
+    public void initStyleInspiration(View view){
+        rvStyleInspiration = view.findViewById(R.id.rv_style_inspiration);
+        inspirationProducts = getListTrendingOutfit();
+        inspirationProductAdapter = new ProductAdapter(getContext(), inspirationProducts);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
+        rvStyleInspiration.setLayoutManager(gridLayoutManager);
+        rvStyleInspiration.setAdapter(inspirationProductAdapter);
+    }
+
+    public void initBestBrand(View view){
+        rvBestBrand = view.findViewById(R.id.rv_best_brand);
+        brands = getListBrands();
+        bestBrandAdapter = new BestBrandAdapter(getContext(), brands);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1, GridLayoutManager.HORIZONTAL, false);
+        rvBestBrand.setLayoutManager(gridLayoutManager);
+        rvBestBrand.setAdapter(bestBrandAdapter);
+    }
+
     public void initTrendingOutfit(View view){
-        rvTrendingOutfit = view.findViewById(R.id.rv_trending_outfit);
+        rvTrendingOutfit =  view.findViewById(R.id.rv_trending_outfit);
         products = getListTrendingOutfit();
         productAdapter = new ProductAdapter(getContext(), products);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
@@ -254,5 +284,16 @@ public class FragmentHome extends Fragment {
             promos.add(promo);
         }
         return promos;
+    }
+
+    public List<Brand> getListBrands(){
+        List<Brand> brands = new ArrayList<>();
+
+        for(int i=0; i<10; i++){
+            Brand brand = new Brand();
+            brand.setImage(R.drawable.origo_logo);
+            brands.add(brand);
+        }
+        return brands;
     }
 }

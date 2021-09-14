@@ -31,14 +31,18 @@
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/fragment_inspire_me.xml" value="0.1716485507246377" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/fragment_menu.xml" value="0.17527173913043478" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/fragment_search.xml" value="0.1716485507246377" />
+        <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/grid_bestbrand.xml" value="0.15806159420289856" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/grid_home_category.xml" value="0.6666666666666666" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/grid_home_flashsale.xml" value="0.6" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/grid_hotsale.xml" value="0.6" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/grid_product.xml" value="0.5" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/grid_product_example.xml" value="0.3671875" />
+        <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/layout_home_best_brand.xml" value="0.1721014492753623" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/layout_home_flashsale.xml" value="0.5" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/layout_home_hotsale.xml" value="0.3671875" />
+        <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/layout_home_style_inspiration.xml" value="0.22" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/layout_home_tending_outfit.xml" value="0.3671875" />
+        <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/layout_home_trending_outfit.xml" value="0.15353260869565216" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/layout/rc_grid_flashsale.xml" value="0.22" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/menu/bottom_menu.xml" value="0.1796875" />
         <entry key="..\:/AndroidStudioFile/FalokaApp/app/src/main/res/menu/top_menu.xml" value="0.22" />

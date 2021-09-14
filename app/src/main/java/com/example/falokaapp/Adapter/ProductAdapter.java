@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.falokaapp.Model.Product;
-import com.example.falokaapp.Model.Promo;
 import com.example.falokaapp.R;
 
 import java.util.List;
