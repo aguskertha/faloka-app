@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.FalokaApp" parent="Theme.AppCompat.NoActionBar">
+    <style name="Theme.FalokaApp" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black_faloka</item>
         <item name="colorPrimaryVariant">@color/black</item>

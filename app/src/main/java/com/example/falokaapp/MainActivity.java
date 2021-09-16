@@ -63,5 +63,12 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(navigation);
 
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("FALOKA");
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        return super.onOptionsItemSelected(item);
     }
 }

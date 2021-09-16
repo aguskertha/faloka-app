@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.falokaapp.Model.Product;
@@ -37,11 +39,18 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Product product = this.products.get(position);
 
-        holder.imgBagCart.setOnClickListener(this);
+//        holder.imgBagCart.setOnClickListener(this);
         holder.imgProduct.setImageResource(product.getImage());
         holder.tvBrand.setText(product.getBrand());
         holder.tvName.setText(product.getName());
         holder.tvPrice.setText(product.getPrice());
+
+        holder.cvProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), product.getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -55,8 +64,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     }
 
+
     public class ProductViewHolder extends RecyclerView.ViewHolder {
 
+        CardView cvProduct;
         ImageView imgProduct;
         ImageView imgBagCart;
         TextView tvBrand;
@@ -65,6 +76,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
+            cvProduct = itemView.findViewById(R.id.cv_product);
             imgProduct = itemView.findViewById(R.id.img_product);
             tvBrand = itemView.findViewById(R.id.tv_brand_product);
             tvName = itemView.findViewById(R.id.tv_name_product);

@@ -6,10 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.falokaapp.FragmentListProduct;
+import com.example.falokaapp.FragmentSearch;
 import com.example.falokaapp.Model.Category;
 import com.example.falokaapp.R;
 
@@ -38,6 +43,21 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         holder.imgCategory.setImageResource(category.getImage());
         holder.tvCategory.setText(category.getName());
+        holder.cvCategory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), holder.tvCategory.getText(), Toast.LENGTH_SHORT).show();
+
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                if(activity != null) {
+                    activity.getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.container_fragment, new FragmentListProduct(), FragmentListProduct.class.getSimpleName())
+                            .addToBackStack(null)
+                            .commit();
+                }
+            }
+        });
 
     }
 
@@ -50,10 +70,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
         ImageView imgCategory;
         TextView tvCategory;
+        CardView cvCategory;
 
         public CategoryViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            cvCategory = itemView.findViewById(R.id.cv_category);
             imgCategory = itemView.findViewById(R.id.img_category);
             tvCategory = itemView.findViewById(R.id.tv_category_name);
 
